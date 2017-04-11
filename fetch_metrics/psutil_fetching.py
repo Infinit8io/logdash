@@ -3,8 +3,6 @@ import os
 import uuid
 from datetime import datetime
 
-from pymongo import MongoClient
-
 # The psutil documentation : http://pythonhosted.org/psutil/
 
 def psutil_fetching():
