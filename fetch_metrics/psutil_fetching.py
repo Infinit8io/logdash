@@ -1,7 +1,10 @@
 import psutil
 import os
 import uuid
+import collections
 from datetime import datetime
+
+import json
 
 # The psutil documentation : http://pythonhosted.org/psutil/
 
@@ -15,8 +18,8 @@ def psutil_fetching():
     machine_version = os.uname()[3]
     machine_uid = os.getuid()
 
-    machine_sexymac = ':'.join(("%012X" % uuid.getnode())[i:i+2] for i in range(0, 12, 2))
-    machine_slugmac = ''.join(("%012X" % uuid.getnode())[i:i+2] for i in range(0, 12, 2))
+    machine_sexymac = ':'.join('{:02x}'.format(b) for b in uuid.getnode().to_bytes(6, 'big')) # Thanks @greut
+    machine_slugmac = "{:012x}".format(uuid.getnode())
 
     # CPU logs
     cpu_usage_percentage = psutil.cpu_percent(interval = 1)
@@ -24,12 +27,6 @@ def psutil_fetching():
     cpu_number_physical = psutil.cpu_count(logical=False)
 
     cpu_times = psutil.cpu_times()
-
-    cpu_time_user = cpu_times[0]
-    cpu_time_nice = cpu_times[1]
-    cpu_time_system = cpu_times[2]
-    cpu_time_idle = cpu_times[3]
-    cpu_time_iowait =  cpu_times[4]
 
     cpu_per_cpu_percentage = psutil.cpu_percent(interval=1, percpu=True)
 
@@ -41,6 +38,7 @@ def psutil_fetching():
 
     # Processes
     processes = [proc.as_dict(attrs=['status', 'pid', 'name', 'username', 'cpu_num']) for proc in psutil.process_iter()]
+    process_counter = collections.Counter([proc["status"] for proc in processes])
 
     # Disks
     disk_usage = psutil.disk_usage("/") # Root disk usage
@@ -69,51 +67,54 @@ def psutil_fetching():
                 'cpu_per_cpu_percentage':   cpu_per_cpu_percentage,
                 'cpu_times': [
                     {
-                    'user':     cpu_time_user,
-                    'nice':     cpu_time_nice,
-                    'system':   cpu_time_system,
-                    'idle':     cpu_time_idle,
-                    'iowait':   cpu_time_iowait,
+                    'user':     cpu_times.user,
+                    'nice':     cpu_times.nice,
+                    'system':   cpu_times.system,
+                    'idle':     cpu_times.idle,
+                    'iowait':   cpu_times.iowait,
                     }
                 ]
                 }
             ],
             'memory': [
                 {
-                'memory_total':     memory[0],
-                'memory_available': memory[1],
-                'memory_percent':   memory[2],
-                'memory_used':      memory[3],
-                'memory_free':      memory[4],
-                'memory_active':    memory[5],
-                'memory_inactive':  memory[6],
+                'memory_total':     memory.total,
+                'memory_available': memory.available,
+                'memory_percent':   memory.percent,
+                'memory_used':      memory.used,
+                'memory_free':      memory.free,
+                'memory_active':    memory.active,
+                'memory_inactive':  memory.inactive,
                 }
             ],
             'process': [
                 {
                 'process_nb':           len(processes),
-                'process_sleeping_nb':  len([p for p in processes if p["status"] == "sleeping"]),
-                'process_running_nb':   len([p for p in processes if p["status"] == "running"]),
-                'process_stopped_nb':   len([p for p in processes if p["status"] == "stopped"]),
+                'process_sleeping_nb':  0 if "sleeping" not in process_counter else process_counter["sleeping"],
+                'process_running_nb':   0 if "running" not in process_counter else process_counter["running"],
+                'process_stopped_nb':   0 if "stopped" not in process_counter else process_counter["stopped"],
                 'processes':            processes,
                 }
             ],
             'disks': [
                 {
-                'disk_total':   disk_usage[0],
-                'disk_used':    disk_usage[1],
-                'disk_free':    disk_usage[2],
-                'disk_percent': disk_usage[3],
+                'disk_total':   disk_usage.total,
+                'disk_used':    disk_usage.used,
+                'disk_free':    disk_usage.free,
+                'disk_percent': disk_usage.percent,
                 }
             ],
             'batteries' : [
                 {
-                    'battery_percentage': batteries[0],
-                    'battery_time_left':  batteries[1],
-                    'battery_plugged':    batteries[2],
+                    'battery_percentage': batteries.percent,
+                    'battery_time_left':  batteries.secsleft,
+                    'battery_plugged':    batteries.power_plugged,
                 }
             ],
         },
     }
 
-    return log
+    print(json.dumps(log, indent=4))
+
+if __name__ == "__main__":
+    psutil_fetching()
