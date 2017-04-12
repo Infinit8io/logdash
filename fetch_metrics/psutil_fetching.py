@@ -2,7 +2,7 @@ import psutil
 import os
 import uuid
 import collections
-from datetime import datetime
+import time
 
 import json
 
@@ -47,6 +47,7 @@ def psutil_fetching():
     connections = psutil.net_connections(kind='inet4')
     net_adresses = psutil.net_if_addrs()
     network_interfaces = {interface : net_adresses[interface][0].address for interface in net_adresses}
+    network_interfaces = collections.OrderedDict(sorted(network_interfaces.items()))
 
 
     # Memory
@@ -60,7 +61,7 @@ def psutil_fetching():
         'machine_platform': machine_platform,   # Posix
         'machine_mac':      machine_sexymac,    # 80:86:F2:67:88:74
         'machine_slug':     machine_slugmac,    # 8086F2678874
-        'metrics_took_at':  datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'metrics_took_at':  time.time(),
         'metrics': {
             'cpu':
                 {
