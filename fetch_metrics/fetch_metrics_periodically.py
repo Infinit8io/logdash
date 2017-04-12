@@ -8,7 +8,7 @@ def scheduled_task():
     log = psutil_fetching()
 
     # POST the log on flask app
-    r = requests.post("http://localhost:5000/consume", json=log)
+    r = requests.post("http://localhost:5000/server", json=log)
 
     # Print status code and response
     print(r.status_code)

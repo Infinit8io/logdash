@@ -58,14 +58,14 @@ def psutil_fetching():
         'machine_mac':      machine_sexymac,    # 80:86:F2:67:88:74
         'machine_slug':     machine_slugmac,    # 8086F2678874
         'metrics': {
-            'cpu':[
+            'cpu':
                 {
                 'took_at':                  datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 'cpu_usage_percentage':     cpu_usage_percentage,
                 'cpu_number_logical':       cpu_number_logical,
                 'cpu_number_physical':      cpu_number_physical,
                 'cpu_per_cpu_percentage':   cpu_per_cpu_percentage,
-                'cpu_times': [
+                'cpu_times':
                     {
                     'user':     cpu_times.user,
                     'nice':     cpu_times.nice,
@@ -73,10 +73,8 @@ def psutil_fetching():
                     'idle':     cpu_times.idle,
                     'iowait':   cpu_times.iowait,
                     }
-                ]
-                }
-            ],
-            'memory': [
+                },
+            'memory':
                 {
                 'memory_total':     memory.total,
                 'memory_available': memory.available,
@@ -85,32 +83,28 @@ def psutil_fetching():
                 'memory_free':      memory.free,
                 'memory_active':    memory.active,
                 'memory_inactive':  memory.inactive,
-                }
-            ],
-            'process': [
+                },
+            'process':
                 {
                 'process_nb':           len(processes),
                 'process_sleeping_nb':  0 if "sleeping" not in process_counter else process_counter["sleeping"],
                 'process_running_nb':   0 if "running" not in process_counter else process_counter["running"],
                 'process_stopped_nb':   0 if "stopped" not in process_counter else process_counter["stopped"],
                 'processes':            processes,
-                }
-            ],
-            'disks': [
+                },
+            'disks':
                 {
                 'disk_total':   disk_usage.total,
                 'disk_used':    disk_usage.used,
                 'disk_free':    disk_usage.free,
                 'disk_percent': disk_usage.percent,
-                }
-            ],
-            'batteries' : [
+                },
+            'batteries' :
                 {
                     'battery_percentage': batteries.percent,
                     'battery_time_left':  batteries.secsleft,
                     'battery_plugged':    batteries.power_plugged,
-                }
-            ],
+                },
         },
     }
 
