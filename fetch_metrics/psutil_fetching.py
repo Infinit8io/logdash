@@ -45,6 +45,9 @@ def psutil_fetching():
 
     # Networks
     connections = psutil.net_connections(kind='inet4')
+    net_adresses = psutil.net_if_addrs()
+    network_interfaces = {interface : net_adresses[interface][0].address for interface in net_adresses}
+
 
     # Memory
     memory = psutil.virtual_memory()
@@ -57,10 +60,10 @@ def psutil_fetching():
         'machine_platform': machine_platform,   # Posix
         'machine_mac':      machine_sexymac,    # 80:86:F2:67:88:74
         'machine_slug':     machine_slugmac,    # 8086F2678874
+        'metrics_took_at':  datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'metrics': {
             'cpu':
                 {
-                'took_at':                  datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 'cpu_usage_percentage':     cpu_usage_percentage,
                 'cpu_number_logical':       cpu_number_logical,
                 'cpu_number_physical':      cpu_number_physical,
@@ -99,11 +102,15 @@ def psutil_fetching():
                 'disk_free':    disk_usage.free,
                 'disk_percent': disk_usage.percent,
                 },
+            'network':
+                [
+                network_interfaces,
+                ],
             'batteries' :
                 {
-                    'battery_percentage': batteries.percent,
-                    'battery_time_left':  batteries.secsleft,
-                    'battery_plugged':    batteries.power_plugged,
+                'battery_percentage': batteries.percent,
+                'battery_time_left':  batteries.secsleft,
+                'battery_plugged':    batteries.power_plugged,
                 },
         },
     }
