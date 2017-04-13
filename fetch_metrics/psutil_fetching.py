@@ -91,9 +91,9 @@ def psutil_fetching():
             'process':
                 {
                 'process_nb':           len(processes),
-                'process_sleeping_nb':  0 if "sleeping" not in process_counter else process_counter["sleeping"],
-                'process_running_nb':   0 if "running" not in process_counter else process_counter["running"],
-                'process_stopped_nb':   0 if "stopped" not in process_counter else process_counter["stopped"],
+                'process_sleeping_nb':  process_counter.get("sleeping", 0),
+                'process_running_nb':   process_counter.get("running", 0),
+                'process_stopped_nb':   process_counter.get("stopped", 0),
                 'processes':            processes,
                 },
             'disks':
@@ -116,8 +116,8 @@ def psutil_fetching():
         },
     }
 
-    #print(json.dumps(log, indent=4))
-    return log
+    print(json.dumps(log, indent=4))
+    #return log
 
 if __name__ == "__main__":
     psutil_fetching()
