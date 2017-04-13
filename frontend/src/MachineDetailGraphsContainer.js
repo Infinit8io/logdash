@@ -19,6 +19,10 @@ class MachineDetailGraphsContainer extends Component {
   componentDidMount(){
   }
 
+  componentWillReceiveProps(nextProps){
+    this.setState({machine_data: nextProps.machine_data})
+  }
+
   render(){
     if(this.state.machine_data != null){
       return  (
@@ -59,12 +63,15 @@ class MachineDetailGraphsContainer extends Component {
 class MachineDetailCpuGraph extends Component {
 
 
-
-  constructor(props){
-    super(props)
-
-
-
+   componentWillReceiveProps(nextProps){
+       this.setState({labels: nextProps.machine_data.map(data => {
+         //Not sure if this is efficient
+         let date = new Date(data.metrics_took_at * 1000)
+         return date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds()
+       }),
+       datasets: this.createDataSets()})
+   }
+  createDataSets(props){
     //If someone finds a nice functionnal way to do this, I will give him a cookie
 
     let cpuCount = this.props.machine_data[0].metrics.cpu.cpu_number_logical;
@@ -72,26 +79,23 @@ class MachineDetailCpuGraph extends Component {
 
     for(let index=0;index < cpuCount; index++){
 
-      let color1 = this.getRandomColor()
-      let color2 = this.getRandomColor()
-      let color3 = this.getRandomColor()
       _datasets.push(
         {
           label: 'CPU '+ index,
           fill: false,
           lineTension: 0.2,
-          backgroundColor: color1,
-          borderColor: color2,
+          backgroundColor: this.cpuColors[index].color1,
+          borderColor: this.cpuColors[index].color2,
           borderCapStyle: 'butt',
           borderDash: [],
           borderDashOffset: 0.0,
           borderJoinStyle: 'miter',
-          pointBorderColor: color2,
+          pointBorderColor: this.cpuColors[index].color2,
           pointBackgroundColor: '#fff',
           pointBorderWidth: 1,
           pointHoverRadius: 2,
-          pointHoverBackgroundColor: color2,
-          pointHoverBorderColor: color3,
+          pointHoverBackgroundColor: this.cpuColors[index].color2,
+          pointHoverBorderColor: this.cpuColors[index].color3,
           pointHoverBorderWidth: 1,
           pointRadius: 1,
           pointHitRadius: 10,
@@ -99,14 +103,27 @@ class MachineDetailCpuGraph extends Component {
         }
       )
     }
+    return _datasets
+  }
+  constructor(props){
+    super(props)
+
+    this.cpuColors = this.props.machine_data[0].metrics.cpu.cpu_per_cpu_percentage.map(cpu => {
+      return {
+      color1 : this.getRandomColor(),
+      color2 : this.getRandomColor(),
+      color3 : this.getRandomColor(),
+    }
+    })
+
 
     this.state = {
       labels: this.props.machine_data.map(data => {
         //Not sure if this is efficient
-        let date = new Date(data.metrics_took_at)
+        let date = new Date(data.metrics_took_at * 1000)
         return date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds()
       }),
-      datasets: _datasets
+      datasets: this.createDataSets()
     }
   }
 

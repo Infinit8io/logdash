@@ -18,7 +18,7 @@ class MachineDetailComponent extends Component {
   }
 
   componentDidMount(){
-    setInterval(() => this.fetchData(),500)
+    setInterval(() => this.fetchData(),3000)
   }
 
   fetchData(){
