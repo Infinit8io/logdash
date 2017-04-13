@@ -36,6 +36,7 @@ def psutil_fetching():
     # Batteries
     batteries = psutil.sensors_battery()
 
+
     # Processes
     processes = [proc.as_dict(attrs=['status', 'pid', 'name', 'username', 'cpu_num']) for proc in psutil.process_iter()]
     process_counter = collections.Counter([proc["status"] for proc in processes])
@@ -106,12 +107,6 @@ def psutil_fetching():
                 [
                 network_interfaces,
                 ],
-            'batteries' :
-                {
-                'battery_percentage': batteries.percent,
-                'battery_time_left':  batteries.secsleft,
-                'battery_plugged':    batteries.power_plugged,
-                },
         },
     }
 
