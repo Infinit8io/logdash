@@ -116,8 +116,8 @@ def psutil_fetching():
         },
     }
 
-    print(json.dumps(log, indent=4))
-    #return log
+    #print(json.dumps(log, indent=4))
+    return log
 
 if __name__ == "__main__":
-    psutil_fetching()
+    print(json.dumps(psutil_fetching(), indent=4))
