@@ -1,1582 +1,15 @@
 {
-    "machine_mac": "80:86:f2:67:88:74",
-    "machine_version": "#93-Ubuntu SMP Fri Mar 31 14:07:41 UTC 2017",
-    "metrics_took_at": 1492084245.4284062,
-    "machine_slug": "8086f2678874",
-    "machine_sysname": "Linux",
     "machine_name": "dom-hp-elitebook",
+    "machine_platform": "posix",
+    "metrics_took_at": 1492086127.5617359,
+    "machine_sysname": "Linux",
+    "machine_slug": "8086f2678874",
+    "machine_mac": "80:86:f2:67:88:74",
     "metrics": {
-        "cpu": {
-            "cpu_usage_percentage": 5.8,
-            "cpu_times": {
-                "user": 209.53,
-                "nice": 13.92,
-                "iowait": 30.36,
-                "system": 53.5,
-                "idle": 2865.66
-            },
-            "cpu_number_logical": 4,
-            "cpu_per_cpu_percentage": [
-                2.0,
-                2.0,
-                1.0,
-                2.9
-            ],
-            "cpu_number_physical": 2
-        },
-        "process": {
-            "process_stopped_nb": 0,
-            "processes": [
-                {
-                    "username": "root",
-                    "name": "systemd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1
-                },
-                {
-                    "username": "root",
-                    "name": "kthreadd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2
-                },
-                {
-                    "username": "root",
-                    "name": "ksoftirqd/0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/0:0H",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 5
-                },
-                {
-                    "username": "root",
-                    "name": "rcu_sched",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 7
-                },
-                {
-                    "username": "root",
-                    "name": "rcu_bh",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 8
-                },
-                {
-                    "username": "root",
-                    "name": "migration/0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 9
-                },
-                {
-                    "username": "root",
-                    "name": "watchdog/0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 10
-                },
-                {
-                    "username": "root",
-                    "name": "watchdog/1",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 11
-                },
-                {
-                    "username": "root",
-                    "name": "migration/1",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 12
-                },
-                {
-                    "username": "root",
-                    "name": "ksoftirqd/1",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 13
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/1:0H",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 15
-                },
-                {
-                    "username": "root",
-                    "name": "watchdog/2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 16
-                },
-                {
-                    "username": "root",
-                    "name": "migration/2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 17
-                },
-                {
-                    "username": "root",
-                    "name": "ksoftirqd/2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 18
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/2:0H",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 20
-                },
-                {
-                    "username": "root",
-                    "name": "watchdog/3",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 21
-                },
-                {
-                    "username": "root",
-                    "name": "migration/3",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 22
-                },
-                {
-                    "username": "root",
-                    "name": "ksoftirqd/3",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 23
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/3:0H",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 25
-                },
-                {
-                    "username": "root",
-                    "name": "kdevtmpfs",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 26
-                },
-                {
-                    "username": "root",
-                    "name": "netns",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 27
-                },
-                {
-                    "username": "root",
-                    "name": "perf",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 28
-                },
-                {
-                    "username": "root",
-                    "name": "khungtaskd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 29
-                },
-                {
-                    "username": "root",
-                    "name": "writeback",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 30
-                },
-                {
-                    "username": "root",
-                    "name": "ksmd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 31
-                },
-                {
-                    "username": "root",
-                    "name": "khugepaged",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 32
-                },
-                {
-                    "username": "root",
-                    "name": "crypto",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 33
-                },
-                {
-                    "username": "root",
-                    "name": "kintegrityd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 34
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 35
-                },
-                {
-                    "username": "root",
-                    "name": "kblockd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 36
-                },
-                {
-                    "username": "root",
-                    "name": "ata_sff",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 37
-                },
-                {
-                    "username": "root",
-                    "name": "md",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 38
-                },
-                {
-                    "username": "root",
-                    "name": "devfreq_wq",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 39
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/2:1",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 41
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/1:2",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 43
-                },
-                {
-                    "username": "root",
-                    "name": "kswapd0",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 45
-                },
-                {
-                    "username": "root",
-                    "name": "vmstat",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 46
-                },
-                {
-                    "username": "root",
-                    "name": "fsnotify_mark",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 47
-                },
-                {
-                    "username": "root",
-                    "name": "ecryptfs-kthrea",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 48
-                },
-                {
-                    "username": "root",
-                    "name": "kthrotld",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 64
-                },
-                {
-                    "username": "root",
-                    "name": "acpi_thermal_pm",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 65
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/u16:2",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 66
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/0:1",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 67
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 68
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 69
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 70
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 71
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 72
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 73
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 74
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 75
-                },
-                {
-                    "username": "root",
-                    "name": "ipv6_addrconf",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 80
-                },
-                {
-                    "username": "root",
-                    "name": "deferwq",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 97
-                },
-                {
-                    "username": "root",
-                    "name": "charger_manager",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 98
-                },
-                {
-                    "username": "root",
-                    "name": "kpsmoused",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 138
-                },
-                {
-                    "username": "root",
-                    "name": "kfd_process_wq",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 141
-                },
-                {
-                    "username": "root",
-                    "name": "ttm_swap",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 142
-                },
-                {
-                    "username": "root",
-                    "name": "rtsx_pci_sdmmc_",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 143
-                },
-                {
-                    "username": "root",
-                    "name": "scsi_eh_0",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 145
-                },
-                {
-                    "username": "root",
-                    "name": "scsi_tmf_0",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 146
-                },
-                {
-                    "username": "root",
-                    "name": "scsi_eh_1",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 147
-                },
-                {
-                    "username": "root",
-                    "name": "scsi_tmf_1",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 148
-                },
-                {
-                    "username": "root",
-                    "name": "bioset",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 151
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/u16:6",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 152
-                },
-                {
-                    "username": "root",
-                    "name": "radeon-crtc",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 154
-                },
-                {
-                    "username": "root",
-                    "name": "radeon-crtc",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 155
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/1:1H",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 176
-                },
-                {
-                    "username": "root",
-                    "name": "jbd2/sda6-8",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 178
-                },
-                {
-                    "username": "root",
-                    "name": "ext4-rsv-conver",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 179
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/3:2",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 212
-                },
-                {
-                    "username": "root",
-                    "name": "kauditd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 218
-                },
-                {
-                    "username": "root",
-                    "name": "systemd-journald",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 220
-                },
-                {
-                    "username": "root",
-                    "name": "systemd-udevd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 258
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/0:1H",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 273
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/2:1H",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 274
-                },
-                {
-                    "username": "root",
-                    "name": "irq/52-mei_me",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 316
-                },
-                {
-                    "username": "root",
-                    "name": "kmemstick",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 331
-                },
-                {
-                    "username": "root",
-                    "name": "cfg80211",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 336
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/3:1H",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 343
-                },
-                {
-                    "username": "root",
-                    "name": "irq/55-iwlwifi",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 350
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/u17:0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 353
-                },
-                {
-                    "username": "root",
-                    "name": "hci0",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 354
-                },
-                {
-                    "username": "root",
-                    "name": "hci0",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 355
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/u17:2",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 359
-                },
-                {
-                    "username": "root",
-                    "name": "kvm-irqfd-clean",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 426
-                },
-                {
-                    "username": "systemd-timesync",
-                    "name": "systemd-timesyncd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 601
-                },
-                {
-                    "username": "messagebus",
-                    "name": "dbus-daemon",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 751
-                },
-                {
-                    "username": "root",
-                    "name": "NetworkManager",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 776
-                },
-                {
-                    "username": "root",
-                    "name": "acpid",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 779
-                },
-                {
-                    "username": "root",
-                    "name": "snapd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 786
-                },
-                {
-                    "username": "root",
-                    "name": "thermald",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 801
-                },
-                {
-                    "username": "root",
-                    "name": "cron",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 804
-                },
-                {
-                    "username": "root",
-                    "name": "bluetoothd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 806
-                },
-                {
-                    "username": "root",
-                    "name": "systemd-logind",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 827
-                },
-                {
-                    "username": "whoopsie",
-                    "name": "whoopsie",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 833
-                },
-                {
-                    "username": "root",
-                    "name": "ModemManager",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 836
-                },
-                {
-                    "username": "root",
-                    "name": "accounts-daemon",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 839
-                },
-                {
-                    "username": "syslog",
-                    "name": "rsyslogd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 843
-                },
-                {
-                    "username": "avahi",
-                    "name": "avahi-daemon",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 853
-                },
-                {
-                    "username": "avahi",
-                    "name": "avahi-daemon",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 872
-                },
-                {
-                    "username": "root",
-                    "name": "cups-browsed",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 942
-                },
-                {
-                    "username": "root",
-                    "name": "irqbalance",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 953
-                },
-                {
-                    "username": "root",
-                    "name": "polkitd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 959
-                },
-                {
-                    "username": "root",
-                    "name": "lightdm",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 980
-                },
-                {
-                    "username": "root",
-                    "name": "dockerd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 997
-                },
-                {
-                    "username": "mysql",
-                    "name": "mysqld",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1022
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1042
-                },
-                {
-                    "username": "root",
-                    "name": "Xorg",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1046
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1057
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1058
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1059
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1060
-                },
-                {
-                    "username": "postgres",
-                    "name": "postgres",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1061
-                },
-                {
-                    "username": "root",
-                    "name": "php-fpm7.0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1062
-                },
-                {
-                    "username": "root",
-                    "name": "docker-containerd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1069
-                },
-                {
-                    "username": "www-data",
-                    "name": "php-fpm7.0",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1075
-                },
-                {
-                    "username": "www-data",
-                    "name": "php-fpm7.0",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1076
-                },
-                {
-                    "username": "root",
-                    "name": "wpa_supplicant",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1113
-                },
-                {
-                    "username": "root",
-                    "name": "lightdm",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1177
-                },
-                {
-                    "username": "rtkit",
-                    "name": "rtkit-daemon",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1243
-                },
-                {
-                    "username": "root",
-                    "name": "krfcommd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1312
-                },
-                {
-                    "username": "root",
-                    "name": "upowerd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1346
-                },
-                {
-                    "username": "colord",
-                    "name": "colord",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1481
-                },
-                {
-                    "username": "dom",
-                    "name": "systemd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1513
-                },
-                {
-                    "username": "dom",
-                    "name": "(sd-pam)",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1515
-                },
-                {
-                    "username": "dom",
-                    "name": "gnome-keyring-daemon",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1521
-                },
-                {
-                    "username": "dom",
-                    "name": "upstart",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1523
-                },
-                {
-                    "username": "dom",
-                    "name": "upstart-udev-bridge",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1602
-                },
-                {
-                    "username": "dom",
-                    "name": "dbus-daemon",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1611
-                },
-                {
-                    "username": "dom",
-                    "name": "window-stack-bridge",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1623
-                },
-                {
-                    "username": "dom",
-                    "name": "upstart-file-bridge",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1671
-                },
-                {
-                    "username": "dom",
-                    "name": "gpg-agent",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1673
-                },
-                {
-                    "username": "dom",
-                    "name": "upstart-dbus-bridge",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1676
-                },
-                {
-                    "username": "dom",
-                    "name": "upstart-dbus-bridge",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1679
-                },
-                {
-                    "username": "dom",
-                    "name": "bamfdaemon",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1682
-                },
-                {
-                    "username": "dom",
-                    "name": "ibus-daemon",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1684
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1691
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd-fuse",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1697
-                },
-                {
-                    "username": "dom",
-                    "name": "ibus-dconf",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1699
-                },
-                {
-                    "username": "dom",
-                    "name": "ibus-ui-gtk3",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1703
-                },
-                {
-                    "username": "dom",
-                    "name": "ibus-x11",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1712
-                },
-                {
-                    "username": "dom",
-                    "name": "ibus-engine-simple",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1728
-                },
-                {
-                    "username": "dom",
-                    "name": "hud-service",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1747
-                },
-                {
-                    "username": "dom",
-                    "name": "unity-settings-daemon",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1749
-                },
-                {
-                    "username": "dom",
-                    "name": "at-spi-bus-launcher",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1754
-                },
-                {
-                    "username": "dom",
-                    "name": "gnome-session-binary",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1756
-                },
-                {
-                    "username": "dom",
-                    "name": "unity-panel-service",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1764
-                },
-                {
-                    "username": "dom",
-                    "name": "dbus-daemon",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1769
-                },
-                {
-                    "username": "dom",
-                    "name": "dconf-service",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1778
-                },
-                {
-                    "username": "dom",
-                    "name": "at-spi2-registryd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1784
-                },
-                {
-                    "username": "dom",
-                    "name": "compiz",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1801
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-messages-service",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1803
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-bluetooth-service",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1808
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-power-service",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1817
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-datetime-service",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 1818
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-keyboard-service",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1819
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-sound-service",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1820
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-printers-service",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1821
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-session-service",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1822
-                },
-                {
-                    "username": "dom",
-                    "name": "indicator-application-service",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1831
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-source-registry",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1858
-                },
-                {
-                    "username": "dom",
-                    "name": "pulseaudio",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1872
-                },
-                {
-                    "username": "root",
-                    "name": "dhclient",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 1940
-                },
-                {
-                    "username": "dom",
-                    "name": "syndaemon",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 1941
-                },
-                {
-                    "username": "nobody",
-                    "name": "dnsmasq",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1955
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-calendar-factory",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 1965
-                },
-                {
-                    "username": "root",
-                    "name": "agetty",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 2079
-                },
-                {
-                    "username": "mongodb",
-                    "name": "mongod",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2103
-                },
-                {
-                    "username": "dom",
-                    "name": "unity-fallback-mount-helper",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2125
-                },
-                {
-                    "username": "dom",
-                    "name": "nautilus",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 2133
-                },
-                {
-                    "username": "root",
-                    "name": "vpnagentd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2144
-                },
-                {
-                    "username": "dom",
-                    "name": "polkit-gnome-authentication-agent-1",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2145
-                },
-                {
-                    "username": "dom",
-                    "name": "gnome-software",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2147
-                },
-                {
-                    "username": "dom",
-                    "name": "nm-applet",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2151
-                },
-                {
-                    "username": "root",
-                    "name": "apache2",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2184
-                },
-                {
-                    "username": "www-data",
-                    "name": "apache2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2185
-                },
-                {
-                    "username": "www-data",
-                    "name": "apache2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2186
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfs-udisks2-volume-monitor",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 2269
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-calendar-factory-subprocess",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2270
-                },
-                {
-                    "username": "root",
-                    "name": "udisksd",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2281
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfs-gphoto2-volume-monitor",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2309
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfs-goa-volume-monitor",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2337
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-addressbook-factory",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 2342
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-calendar-factory-subprocess",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2345
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfs-mtp-volume-monitor",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2353
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfs-afc-volume-monitor",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2358
-                },
-                {
-                    "username": "root",
-                    "name": "fwupd",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 2370
-                },
-                {
-                    "username": "dom",
-                    "name": "evolution-addressbook-factory-subprocess",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 2371
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd-trash",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2407
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd-metadata",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 2447
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd-network",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 3004
-                },
-                {
-                    "username": "dom",
-                    "name": "gvfsd-dnssd",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3054
-                },
-                {
-                    "username": "dom",
-                    "name": "zeitgeist-datahub",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 3134
-                },
-                {
-                    "username": "dom",
-                    "name": "sh",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3143
-                },
-                {
-                    "username": "dom",
-                    "name": "zeitgeist-daemon",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 3147
-                },
-                {
-                    "username": "dom",
-                    "name": "zeitgeist-fts",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3164
-                },
-                {
-                    "username": "dom",
-                    "name": "atom",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3211
-                },
-                {
-                    "username": "dom",
-                    "name": "atom",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3213
-                },
-                {
-                    "username": "dom",
-                    "name": "atom",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3215
-                },
-                {
-                    "username": "dom",
-                    "name": "gconfd-2",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3225
-                },
-                {
-                    "username": "dom",
-                    "name": "atom",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3245
-                },
-                {
-                    "username": "dom",
-                    "name": "update-notifier",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3370
-                },
-                {
-                    "username": "dom",
-                    "name": "deja-dup-monitor",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3471
-                },
-                {
-                    "username": "uuidd",
-                    "name": "uuidd",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3499
-                },
-                {
-                    "username": "dom",
-                    "name": "gnome-terminal-server",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3516
-                },
-                {
-                    "username": "dom",
-                    "name": "bash",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3523
-                },
-                {
-                    "username": "dom",
-                    "name": "firefox",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3597
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/1:1",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3684
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/3:0",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3690
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/2:2",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 3693
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/0:2",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3703
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/u16:0",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3751
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/1:0",
-                    "cpu_num": 1,
-                    "status": "sleeping",
-                    "pid": 3822
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/3:1",
-                    "cpu_num": 3,
-                    "status": "sleeping",
-                    "pid": 3832
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/2:0",
-                    "cpu_num": 2,
-                    "status": "sleeping",
-                    "pid": 3834
-                },
-                {
-                    "username": "root",
-                    "name": "kworker/0:0",
-                    "cpu_num": 0,
-                    "status": "sleeping",
-                    "pid": 3854
-                },
-                {
-                    "username": "dom",
-                    "name": "python",
-                    "cpu_num": 2,
-                    "status": "running",
-                    "pid": 3878
-                }
-            ],
-            "process_running_nb": 1,
-            "process_sleeping_nb": 217,
-            "process_nb": 218
-        },
-        "disks": {
-            "disk_percent": 86.7,
-            "disk_used": 47544397824,
-            "disk_total": 57774772224,
-            "disk_free": 7271923712
-        },
-        "batteries": {
-            "battery_plugged": false,
-            "battery_percentage": 46.09077598828697,
-            "battery_time_left": 4777
-        },
-        "memory": {
-            "memory_percent": 25.7,
-            "memory_used": 1554247680,
-            "memory_free": 5041725440,
-            "memory_available": 6137008128,
-            "memory_total": 8263278592,
-            "memory_inactive": 1095467008,
-            "memory_active": 1868533760
+        "battery": {
+            "percent": 27.291361639824306,
+            "secsleft": 2467,
+            "power_plugged": false
         },
         "network": [
             {
@@ -1585,7 +18,1568 @@
                 "lo": "127.0.0.1",
                 "wlo1": "10.44.44.103"
             }
-        ]
+        ],
+        "cpu": {
+            "cpu_number_logical": 4,
+            "cpu_number_physical": 2,
+            "cpu_per_cpu_percentage": [
+                2.0,
+                3.0,
+                4.1,
+                0.0
+            ],
+            "cpu_times": {
+                "user": 611.55,
+                "nice": 18.36,
+                "system": 127.17,
+                "idle": 9832.14,
+                "iowait": 71.1,
+                "irq": 0.0,
+                "softirq": 0.38,
+                "steal": 0.0,
+                "guest": 0.0,
+                "guest_nice": 0.0
+            },
+            "cpu_usage_percentage": 1.8
+        },
+        "disk": {
+            "total": 57774772224,
+            "used": 47548108800,
+            "free": 7268212736,
+            "percent": 86.7
+        },
+        "memory": {
+            "total": 8263278592,
+            "available": 5962915840,
+            "percent": 27.8,
+            "used": 1729228800,
+            "free": 4849504256,
+            "active": 2063503360,
+            "inactive": 1091411968,
+            "buffers": 102350848,
+            "cached": 1582194688,
+            "shared": 299671552
+        },
+        "process": {
+            "process_sleeping_nb": 215,
+            "process_stopped_nb": 0,
+            "process_nb": 216,
+            "process_running_nb": 1,
+            "processes": [
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1,
+                    "name": "systemd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2,
+                    "name": "kthreadd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 3,
+                    "name": "ksoftirqd/0",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 5,
+                    "name": "kworker/0:0H",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 7,
+                    "name": "rcu_sched",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 8,
+                    "name": "rcu_bh",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 9,
+                    "name": "migration/0",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 10,
+                    "name": "watchdog/0",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 11,
+                    "name": "watchdog/1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 12,
+                    "name": "migration/1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 13,
+                    "name": "ksoftirqd/1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 15,
+                    "name": "kworker/1:0H",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 16,
+                    "name": "watchdog/2",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 17,
+                    "name": "migration/2",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 18,
+                    "name": "ksoftirqd/2",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 20,
+                    "name": "kworker/2:0H",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 21,
+                    "name": "watchdog/3",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 22,
+                    "name": "migration/3",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 23,
+                    "name": "ksoftirqd/3",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 25,
+                    "name": "kworker/3:0H",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 26,
+                    "name": "kdevtmpfs",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 27,
+                    "name": "netns",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 28,
+                    "name": "perf",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 29,
+                    "name": "khungtaskd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 30,
+                    "name": "writeback",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 31,
+                    "name": "ksmd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 32,
+                    "name": "khugepaged",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 33,
+                    "name": "crypto",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 34,
+                    "name": "kintegrityd",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 35,
+                    "name": "bioset",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 36,
+                    "name": "kblockd",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 37,
+                    "name": "ata_sff",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 38,
+                    "name": "md",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 39,
+                    "name": "devfreq_wq",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 41,
+                    "name": "kworker/2:1",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 45,
+                    "name": "kswapd0",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 46,
+                    "name": "vmstat",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 47,
+                    "name": "fsnotify_mark",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 48,
+                    "name": "ecryptfs-kthrea",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 64,
+                    "name": "kthrotld",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 65,
+                    "name": "acpi_thermal_pm",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 68,
+                    "name": "bioset",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 69,
+                    "name": "bioset",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 70,
+                    "name": "bioset",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 71,
+                    "name": "bioset",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 72,
+                    "name": "bioset",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 73,
+                    "name": "bioset",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 74,
+                    "name": "bioset",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 75,
+                    "name": "bioset",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 80,
+                    "name": "ipv6_addrconf",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 97,
+                    "name": "deferwq",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 98,
+                    "name": "charger_manager",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 138,
+                    "name": "kpsmoused",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 141,
+                    "name": "kfd_process_wq",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 142,
+                    "name": "ttm_swap",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 143,
+                    "name": "rtsx_pci_sdmmc_",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 145,
+                    "name": "scsi_eh_0",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 146,
+                    "name": "scsi_tmf_0",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 147,
+                    "name": "scsi_eh_1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 148,
+                    "name": "scsi_tmf_1",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 151,
+                    "name": "bioset",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 154,
+                    "name": "radeon-crtc",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 155,
+                    "name": "radeon-crtc",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 176,
+                    "name": "kworker/1:1H",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 178,
+                    "name": "jbd2/sda6-8",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 179,
+                    "name": "ext4-rsv-conver",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 218,
+                    "name": "kauditd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 220,
+                    "name": "systemd-journald",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 258,
+                    "name": "systemd-udevd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 273,
+                    "name": "kworker/0:1H",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 274,
+                    "name": "kworker/2:1H",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 316,
+                    "name": "irq/52-mei_me",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 331,
+                    "name": "kmemstick",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 336,
+                    "name": "cfg80211",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 343,
+                    "name": "kworker/3:1H",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 350,
+                    "name": "irq/55-iwlwifi",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 353,
+                    "name": "kworker/u17:0",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 354,
+                    "name": "hci0",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 355,
+                    "name": "hci0",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 359,
+                    "name": "kworker/u17:2",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 426,
+                    "name": "kvm-irqfd-clean",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "systemd-timesync",
+                    "pid": 601,
+                    "name": "systemd-timesyncd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "messagebus",
+                    "pid": 751,
+                    "name": "dbus-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 776,
+                    "name": "NetworkManager",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 779,
+                    "name": "acpid",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 786,
+                    "name": "snapd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 801,
+                    "name": "thermald",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 804,
+                    "name": "cron",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 806,
+                    "name": "bluetoothd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 827,
+                    "name": "systemd-logind",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "whoopsie",
+                    "pid": 833,
+                    "name": "whoopsie",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 836,
+                    "name": "ModemManager",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 839,
+                    "name": "accounts-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "syslog",
+                    "pid": 843,
+                    "name": "rsyslogd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "avahi",
+                    "pid": 853,
+                    "name": "avahi-daemon",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "avahi",
+                    "pid": 872,
+                    "name": "avahi-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 942,
+                    "name": "cups-browsed",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 953,
+                    "name": "irqbalance",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 959,
+                    "name": "polkitd",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 980,
+                    "name": "lightdm",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 997,
+                    "name": "dockerd",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "mysql",
+                    "pid": 1022,
+                    "name": "mysqld",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1042,
+                    "name": "postgres",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1046,
+                    "name": "Xorg",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1057,
+                    "name": "postgres",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1058,
+                    "name": "postgres",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1059,
+                    "name": "postgres",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1060,
+                    "name": "postgres",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "postgres",
+                    "pid": 1061,
+                    "name": "postgres",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1062,
+                    "name": "php-fpm7.0",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1069,
+                    "name": "docker-containerd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "www-data",
+                    "pid": 1075,
+                    "name": "php-fpm7.0",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "www-data",
+                    "pid": 1076,
+                    "name": "php-fpm7.0",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1113,
+                    "name": "wpa_supplicant",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1177,
+                    "name": "lightdm",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "rtkit",
+                    "pid": 1243,
+                    "name": "rtkit-daemon",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1312,
+                    "name": "krfcommd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1346,
+                    "name": "upowerd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "colord",
+                    "pid": 1481,
+                    "name": "colord",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1513,
+                    "name": "systemd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1515,
+                    "name": "(sd-pam)",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1521,
+                    "name": "gnome-keyring-daemon",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1523,
+                    "name": "upstart",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1602,
+                    "name": "upstart-udev-bridge",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1611,
+                    "name": "dbus-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1623,
+                    "name": "window-stack-bridge",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1671,
+                    "name": "upstart-file-bridge",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1673,
+                    "name": "gpg-agent",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1676,
+                    "name": "upstart-dbus-bridge",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1679,
+                    "name": "upstart-dbus-bridge",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1682,
+                    "name": "bamfdaemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1684,
+                    "name": "ibus-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1691,
+                    "name": "gvfsd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1697,
+                    "name": "gvfsd-fuse",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1699,
+                    "name": "ibus-dconf",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1703,
+                    "name": "ibus-ui-gtk3",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1712,
+                    "name": "ibus-x11",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1728,
+                    "name": "ibus-engine-simple",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1747,
+                    "name": "hud-service",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1749,
+                    "name": "unity-settings-daemon",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1754,
+                    "name": "at-spi-bus-launcher",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1756,
+                    "name": "gnome-session-binary",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1764,
+                    "name": "unity-panel-service",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1769,
+                    "name": "dbus-daemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1778,
+                    "name": "dconf-service",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1784,
+                    "name": "at-spi2-registryd",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1801,
+                    "name": "compiz",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1803,
+                    "name": "indicator-messages-service",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1808,
+                    "name": "indicator-bluetooth-service",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1817,
+                    "name": "indicator-power-service",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1818,
+                    "name": "indicator-datetime-service",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1819,
+                    "name": "indicator-keyboard-service",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1820,
+                    "name": "indicator-sound-service",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1821,
+                    "name": "indicator-printers-service",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1822,
+                    "name": "indicator-session-service",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1831,
+                    "name": "indicator-application-service",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1858,
+                    "name": "evolution-source-registry",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1872,
+                    "name": "pulseaudio",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 1940,
+                    "name": "dhclient",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1941,
+                    "name": "syndaemon",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "nobody",
+                    "pid": 1955,
+                    "name": "dnsmasq",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 1965,
+                    "name": "evolution-calendar-factory",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2079,
+                    "name": "agetty",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "mongodb",
+                    "pid": 2103,
+                    "name": "mongod",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2125,
+                    "name": "unity-fallback-mount-helper",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2133,
+                    "name": "nautilus",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2144,
+                    "name": "vpnagentd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2145,
+                    "name": "polkit-gnome-authentication-agent-1",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2147,
+                    "name": "gnome-software",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2151,
+                    "name": "nm-applet",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2184,
+                    "name": "apache2",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "www-data",
+                    "pid": 2185,
+                    "name": "apache2",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "www-data",
+                    "pid": 2186,
+                    "name": "apache2",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2269,
+                    "name": "gvfs-udisks2-volume-monitor",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2270,
+                    "name": "evolution-calendar-factory-subprocess",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2281,
+                    "name": "udisksd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2309,
+                    "name": "gvfs-gphoto2-volume-monitor",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2337,
+                    "name": "gvfs-goa-volume-monitor",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2342,
+                    "name": "evolution-addressbook-factory",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2345,
+                    "name": "evolution-calendar-factory-subprocess",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2353,
+                    "name": "gvfs-mtp-volume-monitor",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2358,
+                    "name": "gvfs-afc-volume-monitor",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 2370,
+                    "name": "fwupd",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2371,
+                    "name": "evolution-addressbook-factory-subprocess",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2407,
+                    "name": "gvfsd-trash",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 2447,
+                    "name": "gvfsd-metadata",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3004,
+                    "name": "gvfsd-network",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3054,
+                    "name": "gvfsd-dnssd",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3134,
+                    "name": "zeitgeist-datahub",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3143,
+                    "name": "sh",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3147,
+                    "name": "zeitgeist-daemon",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3164,
+                    "name": "zeitgeist-fts",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3211,
+                    "name": "atom",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3213,
+                    "name": "atom",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3215,
+                    "name": "atom",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3225,
+                    "name": "gconfd-2",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3245,
+                    "name": "atom",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3370,
+                    "name": "update-notifier",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3471,
+                    "name": "deja-dup-monitor",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "uuidd",
+                    "pid": 3499,
+                    "name": "uuidd",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 3597,
+                    "name": "firefox",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 3703,
+                    "name": "kworker/0:2",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4015,
+                    "name": "kworker/1:0",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4028,
+                    "name": "kworker/u16:2",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4032,
+                    "name": "kworker/3:2",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4107,
+                    "name": "kworker/u16:1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4248,
+                    "name": "kworker/u16:0",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4250,
+                    "name": "kworker/0:0",
+                    "cpu_num": 0
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4251,
+                    "name": "kworker/3:1",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4282,
+                    "name": "kworker/2:0",
+                    "cpu_num": 2
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4297,
+                    "name": "kworker/1:1",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4356,
+                    "name": "kworker/3:0",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "root",
+                    "pid": 4377,
+                    "name": "kworker/1:2",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 4383,
+                    "name": "gnome-terminal-server",
+                    "cpu_num": 3
+                },
+                {
+                    "status": "sleeping",
+                    "username": "dom",
+                    "pid": 4390,
+                    "name": "bash",
+                    "cpu_num": 1
+                },
+                {
+                    "status": "running",
+                    "username": "dom",
+                    "pid": 4442,
+                    "name": "python",
+                    "cpu_num": 2
+                }
+            ]
+        }
     },
-    "machine_platform": "posix"
+    "machine_version": "#93-Ubuntu SMP Fri Mar 31 14:07:41 UTC 2017"
 }
