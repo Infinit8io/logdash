@@ -3,7 +3,7 @@ from flask import request
 from pymongo import MongoClient
 from bson.code import Code
 from flask import jsonify
-
+from flask_cors import CORS, cross_origin
 import json
 
 client = MongoClient()
@@ -11,6 +11,7 @@ db = client.logdashDB
 logs = db.logs
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/server', methods=['POST'])
 def consume():
@@ -32,6 +33,7 @@ if __name__ == "__main__":
     app.run()
 
 @app.route('/machines', methods=['GET'])
+@cross_origin()
 def show_machines():
     print("TAKE MY MACHINES")
 
@@ -52,7 +54,7 @@ def show_machines():
         reduce= reducer,
         condition={}
     )
-    return json.dumps(data), 200, {'ContentType':'application/json'}
+    return json.dumps(data), 200, {'Content-Type':'application/json'}
 
 @app.route('/')
 def index():
