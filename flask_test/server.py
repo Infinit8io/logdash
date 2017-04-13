@@ -4,6 +4,7 @@ from pymongo import MongoClient
 from bson.code import Code
 from flask import jsonify
 from flask_cors import CORS, cross_origin
+from bson.json_util import dumps
 import json
 
 client = MongoClient()
@@ -35,12 +36,10 @@ if __name__ == "__main__":
 @app.route('/machines', methods=['GET'])
 @cross_origin()
 def show_machines():
-    print("TAKE MY MACHINES")
-
     reducer = Code("""
                     function(obj, prev){}
                     """)
-    data = db.logs.group(
+    data = logs.group(
         key={
             "machine_slug": True,
             "machine_mac": True,
@@ -55,6 +54,19 @@ def show_machines():
         condition={}
     )
     return json.dumps(data), 200, {'Content-Type':'application/json'}
+
+@app.route('/machine/<string:machine_slug>')
+@cross_origin()
+def get_machine(machine_slug):
+    data = logs.find({"machine_slug": machine_slug}).sort("metrics_took_at").limit(10)
+    return dumps(data, indent=4),200, {'Content-Type':'application/json'}
+
+
+@app.route('/machine/<string:machine_slug>/<float:date_begin>/<float:date_end>')
+@cross_origin
+def get_machine_dates(machine_slug, date_begin, date_end):
+    data = logs.find({"machine_slug": machine_slug, "metrics_took_at": {"$gt" : date_begin, "$lt": date_end} }).sort("metrics_took_at").limit(10)
+    return dumps(data, indent=4),200, {'Content-Type':'application/json'}
 
 @app.route('/')
 def index():
