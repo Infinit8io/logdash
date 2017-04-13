@@ -36,7 +36,6 @@ def psutil_fetching():
     # Batteries
     batteries = psutil.sensors_battery()
 
-
     # Processes
     processes = [proc.as_dict(attrs=['status', 'pid', 'name', 'username', 'cpu_num']) for proc in psutil.process_iter()]
     process_counter = collections.Counter([proc["status"] for proc in processes])
@@ -49,7 +48,6 @@ def psutil_fetching():
     net_adresses = psutil.net_if_addrs()
     network_interfaces = {interface : net_adresses[interface][0].address for interface in net_adresses}
     network_interfaces = collections.OrderedDict(sorted(network_interfaces.items()))
-
 
     # Memory
     memory = psutil.virtual_memory()
@@ -70,25 +68,9 @@ def psutil_fetching():
                 'cpu_number_logical':       cpu_number_logical,
                 'cpu_number_physical':      cpu_number_physical,
                 'cpu_per_cpu_percentage':   cpu_per_cpu_percentage,
-                'cpu_times':
-                    {
-                    'user':     cpu_times.user,
-                    'nice':     cpu_times.nice,
-                    'system':   cpu_times.system,
-                    'idle':     cpu_times.idle,
-                    'iowait':   cpu_times.iowait,
-                    }
+                'cpu_times':                cpu_times._asdict(),
                 },
-            'memory':
-                {
-                'memory_total':     memory.total,
-                'memory_available': memory.available,
-                'memory_percent':   memory.percent,
-                'memory_used':      memory.used,
-                'memory_free':      memory.free,
-                'memory_active':    memory.active,
-                'memory_inactive':  memory.inactive,
-                },
+            'memory': psutil.virtual_memory()._asdict(),
             'process':
                 {
                 'process_nb':           len(processes),
@@ -97,22 +79,14 @@ def psutil_fetching():
                 'process_stopped_nb':   process_counter.get("stopped", 0),
                 'processes':            processes,
                 },
-            'disks':
-                {
-                'disk_total':   disk_usage.total,
-                'disk_used':    disk_usage.used,
-                'disk_free':    disk_usage.free,
-                'disk_percent': disk_usage.percent,
-                },
-            'network':
-                [
-                network_interfaces,
-                ],
+            'disk': disk_usage._asdict(),
+            'network': [network_interfaces,],
+            'battery' : batteries._asdict(),
         },
     }
 
-    #print(json.dumps(log, indent=4))
     return log
 
 if __name__ == "__main__":
     print(json.dumps(psutil_fetching(), indent=4))
+    #print(json.dumps(psutil.virtual_memory()._asdict()))
