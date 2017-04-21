@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
-import {Line} from 'react-chartjs-2';
+import Chart from 'chart.js'
 
 class MachineDetailGraphsContainer extends Component {
 
@@ -62,19 +62,65 @@ class MachineDetailGraphsContainer extends Component {
 
 class MachineDetailCpuGraph extends Component {
 
+  componentDidMount(){
+
+    let canvas = document.getElementById("cpu-chart")
+    let ctx = canvas.getContext('2d')
+    this.setState({
+      canvas: canvas,
+      ctx:ctx,
+      chart: new Chart(ctx , {
+          type: "line",
+          data: this.state.graphData,
+          scales: {
+            yAxes: [{
+              type: "user-defined",
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 100,
+                fixedStepSize: 10,
+              }
+            }]
+        }
+      })
+    })
+  }
 
    componentWillReceiveProps(nextProps){
-       this.setState({labels: nextProps.machine_data.map(data => {
-         //Not sure if this is efficient
-         let date = new Date(data.metrics_took_at * 1000)
-         return date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds()
-       }),
-       datasets: this.createDataSets()})
+
+      let newData = nextProps.machine_data.filter(data => data.metrics_took_at > this.state.lastTimeStamp)
+
+      if(newData.length > 0){
+        let chart = this.state.chart
+
+        chart.data.datasets.forEach((set, index) => {
+
+          //Remove old data
+          set.data.shift()
+
+          set.data.push(...newData.map(data => {
+            return data.metrics.cpu.cpu_per_cpu_percentage[index]
+          }))
+
+        })
+
+        newData.forEach(data => {
+          chart.data.labels.shift()
+          let date = new Date(data.metrics_took_at * 1000)
+          chart.data.labels.push(date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds())
+        })
+
+        let ts = Math.max(...newData.map(d => d.metrics_took_at))
+        console.log(ts)
+        this.setState({lastTimeStamp: ts})
+        chart.update()
+      }
    }
-  createDataSets(props){
+  createDataSets(machine_data){
     //If someone finds a nice functionnal way to do this, I will give him a cookie
 
-    let cpuCount = this.props.machine_data[0].metrics.cpu.cpu_number_logical;
+    let cpuCount = machine_data[0].metrics.cpu.cpu_number_logical;
     let _datasets = []
 
     for(let index=0;index < cpuCount; index++){
@@ -99,7 +145,7 @@ class MachineDetailCpuGraph extends Component {
           pointHoverBorderWidth: 1,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: this.props.machine_data.map(data => data.metrics.cpu.cpu_per_cpu_percentage[index])
+          data: machine_data.map(data => data.metrics.cpu.cpu_per_cpu_percentage[index])
         }
       )
     }
@@ -109,21 +155,23 @@ class MachineDetailCpuGraph extends Component {
     super(props)
 
     this.cpuColors = this.props.machine_data[0].metrics.cpu.cpu_per_cpu_percentage.map(cpu => {
-      return {
-      color1 : this.getRandomColor(),
-      color2 : this.getRandomColor(),
-      color3 : this.getRandomColor(),
-    }
+        return {
+        color1 : this.getRandomColor(),
+        color2 : this.getRandomColor(),
+        color3 : this.getRandomColor(),
+      }
     })
 
-
     this.state = {
-      labels: this.props.machine_data.map(data => {
-        //Not sure if this is efficient
-        let date = new Date(data.metrics_took_at * 1000)
-        return date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds()
-      }),
-      datasets: this.createDataSets()
+      graphData: {
+        labels: this.props.machine_data.map(data => {
+          //Not sure if this is efficient
+          let date = new Date(data.metrics_took_at * 1000)
+          return date.getHours()+" : "+date.getMinutes() + " : " +date.getSeconds()
+        }),
+        datasets: this.createDataSets(this.props.machine_data)
+      },
+      lastTimeStamp: Math.max(...this.props.machine_data.map(d => d.metrics_took_at))
     }
   }
 
@@ -138,9 +186,8 @@ class MachineDetailCpuGraph extends Component {
 
   render(){
     return (
-      <div>
-        <Line data={this.state} />
-      </div>
+      <canvas id="cpu-chart">
+      </canvas>
     )
   }
 
