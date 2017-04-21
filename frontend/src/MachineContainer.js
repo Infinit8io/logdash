@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import MachineComponent from './MachineComponent.js'
+import $ from 'jquery';
+
+const API_URL = "http://localhost:5000/"
 
 class MachineContainer extends Component {
 
@@ -11,9 +14,10 @@ class MachineContainer extends Component {
   }
 
   componentDidMount(){
-    fetch('machines.json')
-        .then(response => response.json())
-        .then(data => this.setState({machines:data}))
+    //Jquery seems the only lib who works here...
+    $.get(API_URL+"machines")
+      .done(data => this.setState({machines: data}))
+      .fail(ex => console.log(ex))
   }
   render(){
     return (

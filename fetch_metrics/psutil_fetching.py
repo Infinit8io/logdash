@@ -49,7 +49,6 @@ def psutil_fetching():
     network_interfaces = {interface : net_adresses[interface][0].address for interface in net_adresses}
     network_interfaces = collections.OrderedDict(sorted(network_interfaces.items()))
 
-
     # Memory
     memory = psutil.virtual_memory()
 
@@ -69,55 +68,25 @@ def psutil_fetching():
                 'cpu_number_logical':       cpu_number_logical,
                 'cpu_number_physical':      cpu_number_physical,
                 'cpu_per_cpu_percentage':   cpu_per_cpu_percentage,
-                'cpu_times':
-                    {
-                    'user':     cpu_times.user,
-                    'nice':     cpu_times.nice,
-                    'system':   cpu_times.system,
-                    'idle':     cpu_times.idle,
-                    'iowait':   cpu_times.iowait,
-                    }
+                'cpu_times':                cpu_times._asdict(),
                 },
-            'memory':
-                {
-                'memory_total':     memory.total,
-                'memory_available': memory.available,
-                'memory_percent':   memory.percent,
-                'memory_used':      memory.used,
-                'memory_free':      memory.free,
-                'memory_active':    memory.active,
-                'memory_inactive':  memory.inactive,
-                },
+            'memory': psutil.virtual_memory()._asdict(),
             'process':
                 {
                 'process_nb':           len(processes),
-                'process_sleeping_nb':  0 if "sleeping" not in process_counter else process_counter["sleeping"],
-                'process_running_nb':   0 if "running" not in process_counter else process_counter["running"],
-                'process_stopped_nb':   0 if "stopped" not in process_counter else process_counter["stopped"],
+                'process_sleeping_nb':  process_counter.get("sleeping", 0),
+                'process_running_nb':   process_counter.get("running", 0),
+                'process_stopped_nb':   process_counter.get("stopped", 0),
                 'processes':            processes,
                 },
-            'disks':
-                {
-                'disk_total':   disk_usage.total,
-                'disk_used':    disk_usage.used,
-                'disk_free':    disk_usage.free,
-                'disk_percent': disk_usage.percent,
-                },
-            'network':
-                [
-                network_interfaces,
-                ],
-            'batteries' :
-                {
-                'battery_percentage': batteries.percent,
-                'battery_time_left':  batteries.secsleft,
-                'battery_plugged':    batteries.power_plugged,
-                },
+            'disk': disk_usage._asdict(),
+            'network': [network_interfaces,],
+            'battery' : batteries._asdict(),
         },
     }
 
-    #print(json.dumps(log, indent=4))
     return log
 
 if __name__ == "__main__":
-    psutil_fetching()
+    print(json.dumps(psutil_fetching(), indent=4))
+    #print(json.dumps(psutil.virtual_memory()._asdict()))

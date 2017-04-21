@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
 import MachineContainer from './MachineContainer.js'
 import MachineDetailComponent from './MachineDetailComponent.js'
 
@@ -17,7 +16,7 @@ class App extends Component {
       <Router>
           <div>
             <Route exact path="/" component={MachineContainer}/>
-            <Route path="/machine:id" component={MachineDetailComponent}/>
+            <Route excat path="/machine/:id" component={MachineDetailComponent}/>
           </div>
       </Router>
     );
