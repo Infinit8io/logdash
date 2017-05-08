@@ -14,7 +14,7 @@ def scheduled_task():
     print(r.status_code)
 
     print("Requested psutil_fetching.py")
-    s.enter(5, 1, scheduled_task)
+    s.enter(0.1, 1, scheduled_task)
 
 def main():
     # scheduler.enter(delay, priority, action, argument=(), kwargs={})

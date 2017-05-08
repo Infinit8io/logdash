@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
+    "chart.js": "^2.5.0",
+    "chart.js-v2": "^2.0.0",
+    "chartjs": "^0.3.24",
+    "fetch-jsonp": "^1.0.6",
+    "jquery": "^3.2.1",
     "react": "^15.5.4",
+    "react-chartjs-2": "^2.0.5",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {

@@ -36,15 +36,16 @@ class MachineDetailComponent extends Component {
     return (
       <div>
         <ol className="breadcrumb">
-          <li className="breadcrumb-item"><a href="#">Home</a></li>
-          <li className="breadcrumb-item active">State</li>
+          <li className="breadcrumb-item"><a href="/">Home</a></li>
+          <li className="breadcrumb-item active">{this.state.machine_info.machine_name + "(" +this.state.machine_info.machine_mac + " )" }</li>
         </ol>
 
         <div className="card-columns">
           <HeaderMachineNameBadge machineName={this.state.machine_info.machine_name} />
           <HeaderSystemNameBadge  systemName={this.state.machine_info.machine_sysname} />
           <HeaderCpuBadge  numCpus={this.state.machine_info.metrics.cpu.cpu_number_logical} />
-          <HeaderMemoryBadge memorySize={this.state.machine_info.metrics.memory.memory_total / 1073741824} />
+          <HeaderMemoryBadge memorySize={this.state.machine_info.metrics.memory.total / 1073741824} />
+          <HeaderMemoryPercentageBadge memoryPercentage={this.state.machine_info.metrics.memory.percent} />
         </div>
 
         <MachineDetailGraphsContainer machine_data={this.state.machine_data} />
@@ -71,6 +72,19 @@ const HeaderMemoryBadge = ({memorySize}) => (
     </div>
   </div>
 )
+
+const HeaderMemoryPercentageBadge = ({memoryPercentage}) => {
+  let colorClass = memoryPercentage > 70 ? "memory-red" : "memory-green";
+  colorClass = "card-title big-title " + colorClass
+  return (
+    <div className="card text-center">
+      <div className="card-block">
+        <h1 className={colorClass}>{memoryPercentage}</h1>
+        <p className="card-text">of RAM used</p>
+      </div>
+    </div>
+  )
+}
 
 const HeaderSystemNameBadge = ({systemName}) => (
   <div className="card text-center">

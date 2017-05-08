@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from pymongo import MongoClient
+from pymongo import MongoClient,ASCENDING, DESCENDING
 from bson.code import Code
 from flask import jsonify
 from flask_cors import CORS, cross_origin
@@ -58,7 +58,7 @@ def show_machines():
 @app.route('/machine/<string:machine_slug>')
 @cross_origin()
 def get_machine(machine_slug):
-    data = logs.find({"machine_slug": machine_slug}).sort("metrics_took_at").limit(10)
+    data = logs.find({"machine_slug": machine_slug}).sort("metrics_took_at",DESCENDING).limit(10)
     return dumps(data, indent=4),200, {'Content-Type':'application/json'}
 
 

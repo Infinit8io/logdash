@@ -34,7 +34,7 @@ def psutil_fetching():
     # temperatures = psutil.sensors_temperatures() # Looks like it doesn't work
 
     # Batteries
-    batteries = psutil.sensors_battery()
+    batteries = {}
 
     # Processes
     processes = [proc.as_dict(attrs=['status', 'pid', 'name', 'username', 'cpu_num']) for proc in psutil.process_iter()]
@@ -81,7 +81,6 @@ def psutil_fetching():
                 },
             'disk': disk_usage._asdict(),
             'network': [network_interfaces,],
-            'battery' : batteries._asdict(),
         },
     }
 
